@@ -26,6 +26,9 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: 1.18
+      - name: Docker Hub Login
+        run: |
+          printf ${{ secrets.DOCKERHUB_PASSWORD }} | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
       -
         name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
