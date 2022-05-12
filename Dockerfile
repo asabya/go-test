@@ -4,4 +4,4 @@ COPY test /
 
 EXPOSE 8080
 
-ENTRYPOINT ["test"]
+ENTRYPOINT ["/test"]
