@@ -1,5 +1,5 @@
 FROM debian:11.2-slim
+RUN ls
+COPY test /
 
-COPY go-test /
-
-ENTRYPOINT ["go-test"]
+ENTRYPOINT ["test"]
