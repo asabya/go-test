@@ -31,7 +31,8 @@ changelog:
       - '^test:'
 dockers:
   - image_templates:
-      - "asabya/go-test:{{ .Version }}-amd64"
+      - "asabya/go-test:v{{ .Version }}"
+      - "asabya/go-test:latest"
     dockerfile: Dockerfile
     use: buildx
     build_flag_templates:
