@@ -1,4 +1,5 @@
 FROM debian:11.2-slim
-ENTRYPOINT ["/go-test"]
-RUN ls -al
+
 COPY go-test /
+
+ENTRYPOINT ["go-test"]
