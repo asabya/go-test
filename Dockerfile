@@ -1,3 +1,3 @@
 FROM scratch
-ENTRYPOINT ["go-test"]
+ENTRYPOINT ["/go-test"]
 COPY go-test /
