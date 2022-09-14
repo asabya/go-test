@@ -25,7 +25,8 @@ jobs:
         run: |
           sudo apt-get update -y
           sudo apt-get -y install build-essential gcc-x86-64-linux-gnu
-          sudo apt-get -y gcc g++ make git
+          sudo apt-get -y install gcc g++ make git
+          gcc --version
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
