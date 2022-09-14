@@ -29,11 +29,10 @@ jobs:
 
       - name: Install fdp-play
         run: npm install -g @fairdatasociety/fdp-play
-      - name: Add hosts to /etc/hosts
-        run: sudo echo "127.0.0.1 fdp-play-queen" | sudo tee -a /etc/hosts
-      - name: Add hosts to /etc/hosts
-        run: sudo echo "127.0.0.1 fdp-play-blockchain" | sudo tee -a /etc/hosts
-      - name: Cat /etc/hosts
-        run: cat /etc/hosts
       - name: Run fdp-play
-        run: fdp-play start --fairos
+        run: fdp-play start --detach
+      - name: Download fairos
+        run: wget https://github.com/fairDataSociety/fairOS-dfs/releases/download/v0.8.2-rc6/dfs_v0.8.2-rc6_linux_amd64 \
+            && mv dfs_v0.8.2-rc6_linux_amd64 dfs \
+            && chmod +x dfs \
+            && ./dfs version
