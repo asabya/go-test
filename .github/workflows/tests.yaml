@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 1
       - name: Install deps
         run: |
-          sudo apt-get -y install make gcc git musl-dev libc-dev linux-headers bash
+          sudo apt-get -y install make gcc git musl-dev libc-dev bash
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
