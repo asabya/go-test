@@ -32,7 +32,9 @@ jobs:
       - name: Run fdp-play
         run: fdp-play start --detach
       - name: Download fairos
-        run: wget https://github.com/fairDataSociety/fairOS-dfs/releases/download/v0.8.2-rc6/dfs_v0.8.2-rc6_linux_amd64 \
+        run: wget https://github.com/fairDataSociety/fairOS-dfs/releases/download/v0.8.2-rc6/dfs_v0.8.2-rc6_linux_amd64
+      - name: Install fairos
+        run: \
             && mv dfs_v0.8.2-rc6_linux_amd64 dfs \
             && chmod +x dfs \
             && ./dfs version
