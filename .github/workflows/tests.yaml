@@ -37,4 +37,6 @@ jobs:
         run: |
           mv dfs_v0.8.2-rc6_linux_amd64 dfs
           chmod +x dfs
-          ./dfs version
+      - name: Run fairos
+        run: |
+          dfs --network play --rpc http://localhost:9545 --beeApi http://localhost:1633 --postageBlockId dbcd33b8f91cc89f082edb113f1d8eaaa0ac1f415c077d01e83965b6f5426c65
